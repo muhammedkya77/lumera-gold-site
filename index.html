@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumera Gold | Zarafetin ve Güvenin Adresi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0e0e0e;
+            --bg-card: #161616;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        }
+
+        /* Canlı Kur Şeridi */
+        .ticker-bar {
+            background-color: #1c1910;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 8px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+        }
+
+        .ticker-item span {
+            color: var(--gold);
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        /* Üst Menü */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(14, 14, 14, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .brand {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Giriş (Hero) Alanı */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.85)),
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #d8d8d8;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border: 1px solid var(--gold);
+            color: var(--bg-dark);
+            background-color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        /* Bölümler Ortak */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 0.95rem;
+        }
+
+        /* Koleksiyonlar */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .card-body h3 {
+            color: var(--gold-light);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        /* Hakkımızda & Güven */
+        .about {
+            background-color: #121212;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #cccccc;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature-box {
+            border-left: 2px solid var(--gold);
+            padding-left: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* İletişim */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .contact-box {
+            background: var(--bg-card);
+            padding: 35px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-box h3 {
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Sabit WhatsApp Butonu */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 999;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Örnek Altın Fiyatları Bandı -->
+    <div class="ticker-bar">
+        <div class="ticker-item">GRAM ALTIN: <span>₺3.150,00</span></div>
+        <div class="ticker-item">ÇEYREK ALTIN: <span>₺5.180,00</span></div>
+        <div class="ticker-item">YARIM ALTIN: <span>₺10.360,00</span></div>
+        <div class="ticker-item">TAM ALTIN: <span>₺20.650,00</span></div>
+    </div>
+
+    <!-- Üst Menü -->
+    <header>
+        <a href="#" class="brand">LUMERA GOLD</a>
+        <nav>
+            <a href="#koleksiyonlar">Koleksiyonlar</a>
+            <a href="#hakkimizda">Hakkımızda</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+    </header>
+
+    <!-- Giriş Alanı -->
+    <section class="hero">
+        <h1>Işıltının En Saf Hali</h1>
+        <p>Lumera Gold ile zamansız tasarımlar, sertifikalı pırlantalar ve güvenilir yatırım altınları bir arada.</p>
+        <a href="#koleksiyonlar" class="btn">KOLEKSİYONU KEŞFET</a>
+    </section>
+
+    <!-- Koleksiyonlar -->
+    <section id="koleksiyonlar">
+        <h2 class="section-title">ÖZEL KOLEKSİYONLAR</h2>
+        <p class="section-subtitle">El işçiliği ve modern estetiğin buluştuğu seçkin tasarımlarımız</p>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="Tektaş ve Pırlanta">
+                <div class="card-body">
+                    <h3>Pırlanta & Tektaş</h3>
+                    <p>Uluslararası sertifikalı, ömür boyu ışıltısını koruyan özel kesim yüzükler.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80" alt="Bilezik ve Kelepçe">
+                <div class="card-body">
+                    <h3>Bilezik & Kelepçe</h3>
+                    <p>14 ve 22 ayar modern kelepçeler, geleneksel ve zarif bilezik modelleri.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" alt="Düğün Setleri">
+                <div class="card-body">
+                    <h3>Düğün & Gerdanlık Setleri</h3>
+                    <p>En özel günlerinize eşlik edecek göz alıcı altın ve taşlı setler.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=800&q=80" alt="Sarrafiye">
+                <div class="card-body">
+                    <h3>Sarrafiye & Yatırım</h3>
+                    <p>Güvenilir alış-satış garantisiyle gram, çeyrek, cumhuriyet altını ve külçe seçenekleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="about">
+        <div class="about-text">
+            <h2>LUMERA GOLD HAKKINDA</h2>
+            <p>Lumera Gold olarak, kuyumculuk geleneğini çağdaş tasarım anlayışıyla birleştiriyoruz. Her bir parçamızda yüksek ayar garantisi, şeffaf fiyatlandırma ve kusursuz işçilik sunuyoruz.</p>
+            <p>İster özel bir anı ölümsüzleştirmek ister birikimlerinize değer katmak isteyin, uzman ekibimizle mağazamızda yanınızdayız.</p>
+            <div class="features">
+                <div class="feature-box"><strong>Sertifikalı Ürünler</strong><br>Ayar ve taş garantisi</div>
+                <div class="feature-box"><strong>Değerinde Alım-Satım</strong><br>Güncel piyasa kurları</div>
+                <div class="feature-box"><strong>Özel Tasarım</strong><br>Kişiye özel üretim</div>
+                <div class="feature-box"><strong>Bakım & Onarım</strong><br>Ücretsiz parlatma hizmeti</div>
+            </div>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=80" alt="Lumera Gold Mağaza" style="width:100%; border: 1px solid rgba(212,175,55,0.3);">
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim">
+        <h2 class="section-title">BİZE ULAŞIN</h2>
+        <p class="section-subtitle">Koleksiyonlarımızı yakından incelemek ve güncel fiyat bilgisi almak için mağazamıza bekleriz</p>
+        
+        <div class="contact-grid">
+            <div class="contact-box">
+                <h3>MAĞAZA ADRESİ</h3>
+                <p>Gültepe Mahallesi, Beşikçi Caddes No: 12<br>Türkiye/Batmanp>
+            </div>
+            <div class="contact-box">
+                <h3>ÇALIŞMA SAATLERİ</h3>
+                <p>Pazartesi - Cumartesi: 09:00 - 19:30<br>Pazar: Kapalı</p>
+            </div>
+            <div class="contact-box">
+                <h3>TELEFON & WHATSAPP</h3>
+                <p>+90 (532) 068 90 92<br>info@lumeragold.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Lumera Gold. Tüm Hakları Saklıdır.
+    </footer>
+
+    <!-- WhatsApp Hızlı Erişim -->
+    <a href="https://wa.me/905320689092" target="_blank" class="whatsapp-float">WhatsApp ile Sor</a>
+
+</body>
+</html>
