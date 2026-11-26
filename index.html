@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumera Gold | Zarafetin ve Güvenin Adresi</title>
+    <title id="cms-page-title">Lumera Gold | Zarafetin ve Güvenin Adresi</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -275,8 +275,8 @@
 </head>
 <body>
 
-    <!-- Örnek Altın Fiyatları Bandı -->
-    <div class="ticker-bar">
+    <!-- Altın Fiyatları Bandı -->
+    <div class="ticker-bar" id="cms-ticker-bar">
         <div class="ticker-item">GRAM ALTIN: <span>₺3.150,00</span></div>
         <div class="ticker-item">ÇEYREK ALTIN: <span>₺5.180,00</span></div>
         <div class="ticker-item">YARIM ALTIN: <span>₺10.360,00</span></div>
@@ -285,7 +285,7 @@
 
     <!-- Üst Menü -->
     <header>
-        <a href="#" class="brand">LUMERA GOLD</a>
+        <a href="#" class="brand" id="cms-brand-name">LUMERA GOLD</a>
         <nav>
             <a href="#koleksiyonlar">Koleksiyonlar</a>
             <a href="#hakkimizda">Hakkımızda</a>
@@ -294,18 +294,18 @@
     </header>
 
     <!-- Giriş Alanı -->
-    <section class="hero">
-        <h1>Işıltının En Saf Hali</h1>
-        <p>Lumera Gold ile zamansız tasarımlar, sertifikalı pırlantalar ve güvenilir yatırım altınları bir arada.</p>
-        <a href="#koleksiyonlar" class="btn">KOLEKSİYONU KEŞFET</a>
+    <section class="hero" id="cms-hero-section">
+        <h1 id="cms-hero-title">Işıltının En Saf Hali</h1>
+        <p id="cms-hero-desc">Lumera Gold ile zamansız tasarımlar, sertifikalı pırlantalar ve güvenilir yatırım altınları bir arada.</p>
+        <a href="#koleksiyonlar" class="btn" id="cms-hero-btn">KOLEKSİYONU KEŞFET</a>
     </section>
 
     <!-- Koleksiyonlar -->
     <section id="koleksiyonlar">
-        <h2 class="section-title">ÖZEL KOLEKSİYONLAR</h2>
-        <p class="section-subtitle">El işçiliği ve modern estetiğin buluştuğu seçkin tasarımlarımız</p>
-        
-        <div class="grid">
+        <h2 class="section-title" id="cms-collections-title">ÖZEL KOLEKSİYONLAR</h2>
+        <p class="section-subtitle" id="cms-collections-subtitle">El işçiliği ve modern estetiğin buluştuğu seçkin tasarımlarımız</p>
+
+        <div class="grid" id="cms-collections">
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="Tektaş ve Pırlanta">
                 <div class="card-body">
@@ -340,9 +340,9 @@
     <!-- Hakkımızda -->
     <section id="hakkimizda" class="about">
         <div class="about-text">
-            <h2>LUMERA GOLD HAKKINDA</h2>
-            <p>Lumera Gold olarak, kuyumculuk geleneğini çağdaş tasarım anlayışıyla birleştiriyoruz. Her bir parçamızda yüksek ayar garantisi, şeffaf fiyatlandırma ve kusursuz işçilik sunuyoruz.</p>
-            <p>İster özel bir anı ölümsüzleştirmek ister birikimlerinize değer katmak isteyin, uzman ekibimizle mağazamızda yanınızdayız.</p>
+            <h2 id="cms-about-title">LUMERA GOLD HAKKINDA</h2>
+            <p id="cms-about-p1">Lumera Gold olarak, kuyumculuk geleneğini çağdaş tasarım anlayışıyla birleştiriyoruz. Her bir parçamızda yüksek ayar garantisi, şeffaf fiyatlandırma ve kusursuz işçilik sunuyoruz.</p>
+            <p id="cms-about-p2">İster özel bir anı ölümsüzleştirmek ister birikimlerinize değer katmak isteyin, uzman ekibimizle mağazamızda yanınızdayız.</p>
             <div class="features">
                 <div class="feature-box"><strong>Sertifikalı Ürünler</strong><br>Ayar ve taş garantisi</div>
                 <div class="feature-box"><strong>Değerinde Alım-Satım</strong><br>Güncel piyasa kurları</div>
@@ -351,7 +351,7 @@
             </div>
         </div>
         <div>
-            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=80" alt="Lumera Gold Mağaza" style="width:100%; border: 1px solid rgba(212,175,55,0.3);">
+            <img id="cms-about-image" src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=80" alt="Lumera Gold Mağaza" style="width:100%; border: 1px solid rgba(212,175,55,0.3);">
         </div>
     </section>
 
@@ -359,29 +359,110 @@
     <section id="iletisim">
         <h2 class="section-title">BİZE ULAŞIN</h2>
         <p class="section-subtitle">Koleksiyonlarımızı yakından incelemek ve güncel fiyat bilgisi almak için mağazamıza bekleriz</p>
-        
+
         <div class="contact-grid">
             <div class="contact-box">
                 <h3>MAĞAZA ADRESİ</h3>
-                <p>Gültepe Mahallesi, Beşikçi Caddes No: 12<br>Türkiye/Batmanp>
+                <p id="cms-address">Gültepe Mahallesi, Beşikçi Caddesi No: 12<br>Türkiye / Batman</p>
             </div>
             <div class="contact-box">
                 <h3>ÇALIŞMA SAATLERİ</h3>
-                <p>Pazartesi - Cumartesi: 09:00 - 19:30<br>Pazar: Kapalı</p>
+                <p id="cms-hours">Pazartesi - Cumartesi: 09:00 - 19:30<br>Pazar: Kapalı</p>
             </div>
             <div class="contact-box">
                 <h3>TELEFON & WHATSAPP</h3>
-                <p>+90 (532) 068 90 92<br>info@lumeragold.com</p>
+                <p><span id="cms-phone">+90 (532) 068 90 92</span><br><span id="cms-email">info@lumeragold.com</span></p>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer id="cms-footer">
         &copy; 2026 Lumera Gold. Tüm Hakları Saklıdır.
     </footer>
 
     <!-- WhatsApp Hızlı Erişim -->
-    <a href="https://wa.me/905320689092" target="_blank" class="whatsapp-float">WhatsApp ile Sor</a>
+    <a id="cms-whatsapp" href="https://wa.me/905320689092" target="_blank" rel="noopener noreferrer" class="whatsapp-float">WhatsApp ile Sor</a>
 
+    <script>
+        (async function loadLumeraCmsData() {
+            try {
+                const res = await fetch('/content/site.json?v=' + Date.now());
+                if (!res.ok) return;
+                const data = await res.json();
+
+                const setText = (id, val) => {
+                    const el = document.getElementById(id);
+                    if (el && typeof val === 'string' && val.trim() !== '') {
+                        el.textContent = val;
+                    }
+                };
+
+                const setHtmlLines = (id, val) => {
+                    const el = document.getElementById(id);
+                    if (el && typeof val === 'string' && val.trim() !== '') {
+                        el.innerHTML = val.replace(/\n/g, '<br>');
+                    }
+                };
+
+                if (data.brandName) {
+                    setText('cms-brand-name', data.brandName.toUpperCase());
+                    setText('cms-page-title', data.brandName + (data.tagline ? ' | ' + data.tagline : ''));
+                    setText('cms-footer', `© 2026 ${data.brandName}. Tüm Hakları Saklıdır.`);
+                }
+
+                setText('cms-hero-title', data.heroTitle);
+                setText('cms-hero-desc', data.heroDescription);
+
+                const heroSection = document.getElementById('cms-hero-section');
+                if (heroSection && typeof data.heroImage === 'string' && data.heroImage.trim() !== '') {
+                    heroSection.style.background = `linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.85)), url('${data.heroImage}') center/cover no-repeat`;
+                }
+
+                const tickerBar = document.getElementById('cms-ticker-bar');
+                if (tickerBar && Array.isArray(data.goldRates) && data.goldRates.length > 0) {
+                    tickerBar.innerHTML = data.goldRates.map(item => {
+                        const label = item.name || 'ALTIN';
+                        const priceText = item.sell ? `${item.sell}` : (item.buy || '-');
+                        return `<div class="ticker-item">${label.toUpperCase()}: <span>${priceText}</span></div>`;
+                    }).join('');
+                }
+
+                const collectionsGrid = document.getElementById('cms-collections');
+                if (collectionsGrid && Array.isArray(data.collections) && data.collections.length > 0) {
+                    collectionsGrid.innerHTML = data.collections.map(card => `
+                        <div class="card">
+                            ${card.image ? `<img src="${card.image}" alt="${card.title || ''}">` : ''}
+                            <div class="card-body">
+                                <h3>${card.title || ''}</h3>
+                                <p>${card.description || ''}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+
+                if (data.aboutImage && typeof data.aboutImage === 'string' && data.aboutImage.trim() !== '') {
+                    const aboutImg = document.getElementById('cms-about-image');
+                    if (aboutImg) aboutImg.src = data.aboutImage;
+                }
+
+                if (data.contact) {
+                    setHtmlLines('cms-address', data.contact.address);
+                    setHtmlLines('cms-hours', data.contact.workingHours);
+                    setText('cms-phone', data.contact.phone);
+                    setText('cms-email', data.contact.email);
+
+                    const waLink = document.getElementById('cms-whatsapp');
+                    if (waLink && data.contact.whatsappNumber) {
+                        const cleanNum = String(data.contact.whatsappNumber).replace(/\D/g, '');
+                        if (cleanNum) {
+                            waLink.href = 'https://wa.me/' + cleanNum;
+                        }
+                    }
+                }
+            } catch (e) {
+                console.warn('CMS verisi henüz yüklenmedi veya varsayılan değerler kullanılıyor.');
+            }
+        })();
+    </script>
 </body>
 </html>
