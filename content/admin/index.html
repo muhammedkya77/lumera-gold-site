@@ -1,0 +1,59 @@
+<script>
+  (async function loadLumeraCmsData() {
+    try {
+      const response = await fetch('/content/site.json?v=' + Date.now());
+      if (!response.ok) return;
+      const data = await response.json();
+
+      const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && typeof value === 'string') el.textContent = value;
+      };
+
+      if (data.brandName) {
+        document.title = data.brandName + (data.tagline ? ' | ' + data.tagline : '');
+      }
+      setText('cms-brand-name', data.brandName);
+      setText('cms-tagline', data.tagline);
+      setText('cms-hero-title', data.heroTitle);
+      setText('cms-hero-desc', data.heroDescription);
+
+      const ratesContainer = document.getElementById('cms-gold-rates');
+      if (ratesContainer && Array.isArray(data.goldRates)) {
+        ratesContainer.innerHTML = data.goldRates.map(item => `
+          <div class="rate-row">
+            <span class="rate-name">${item.name || ''}</span>
+            <span class="rate-buy">Alış: ${item.buy || '-'}</span>
+            <span class="rate-sell">Satış: ${item.sell || '-'}</span>
+          </div>
+        `).join('');
+      }
+
+      const collectionsContainer = document.getElementById('cms-collections');
+      if (collectionsContainer && Array.isArray(data.collections)) {
+        collectionsContainer.innerHTML = data.collections.map(card => `
+          <article class="collection-card">
+            ${card.image ? `<img src="${card.image}" alt="${card.title || ''}" loading="lazy" />` : ''}
+            <h3>${card.title || ''}</h3>
+            <p>${card.description || ''}</p>
+          </article>
+        `).join('');
+      }
+
+      if (data.contact) {
+        setText('cms-phone', data.contact.phone);
+        setText('cms-email', data.contact.email);
+        setText('cms-address', data.contact.address);
+        setText('cms-hours', data.contact.workingHours);
+
+        const waLink = document.getElementById('cms-whatsapp');
+        if (waLink && data.contact.whatsappNumber) {
+          const cleanNum = String(data.contact.whatsappNumber).replace(/\D/g, '');
+          waLink.href = 'https://wa.me/' + cleanNum;
+        }
+      }
+    } catch (err) {
+      console.error('CMS verisi okunamadı:', err);
+    }
+  })();
+</script>
