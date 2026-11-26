@@ -1,0 +1,54 @@
+{
+  "brandName": "Lumera Gold",
+  "tagline": "Zarafetin ve Güvenin Buluşma Noktası",
+  "heroTitle": "Zamansız Altın ve Seçkin Mücevher Koleksiyonu",
+  "heroDescription": "Günlük güncel altın kurlarını takip edin, özenle seçilmiş koleksiyonlarımızı inceleyin ve mağazamızla doğrudan iletişime geçin.",
+  "heroImage": "/images/hero-gold.jpg",
+  "goldRatesUpdatedAt": "Güncel Taslak Kurlar",
+  "goldRates": [
+    {
+      "name": "Has Altın (995)",
+      "buy": "3.150,00 TL",
+      "sell": "3.185,00 TL"
+    },
+    {
+      "name": "Gram Altın (24 Ayar)",
+      "buy": "3.140,00 TL",
+      "sell": "3.175,00 TL"
+    },
+    {
+      "name": "Çeyrek Altın",
+      "buy": "5.120,00 TL",
+      "sell": "5.210,00 TL"
+    },
+    {
+      "name": "22 Ayar Bilezik (Gram)",
+      "buy": "2.870,00 TL",
+      "sell": "2.940,00 TL"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Klasik & Yatırım Serisi",
+      "description": "Yüksek saflıkta işçilikle hazırlanan zamansız altın ve yatırım parçaları.",
+      "image": "/images/collection-1.jpg"
+    },
+    {
+      "title": "Modern Altın Takılar",
+      "description": "Günlük şıklığı ve özel davetleri tamamlayan özgün tasarım kolye ve küpeler.",
+      "image": "/images/collection-2.jpg"
+    },
+    {
+      "title": "Özel Gün & Bilezik Koleksiyonu",
+      "description": "Nesilden nesile aktarılan zarif bilezik ve özel gün setleri.",
+      "image": "/images/collection-3.jpg"
+    }
+  ],
+  "contact": {
+    "phone": "+90 (500) 000 00 00",
+    "whatsappNumber": "905000000000",
+    "email": "iletisim@lumeragold.com",
+    "address": "Mağaza Adresi — Şehir / İlçe",
+    "workingHours": "Pzt – Cmt: 09:00 – 19:30"
+  }
+}
