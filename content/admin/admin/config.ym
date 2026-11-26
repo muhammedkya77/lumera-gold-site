@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: muhammedkya77/lumera-gold-site
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+locale: "tr"
+
+collections:
+  - name: "site_settings"
+    label: "Site ve Fiyat Yönetimi"
+    files:
+      - name: "home"
+        label: "Ana Sayfa, Kurlar ve İletişim"
+        file: "content/site.json"
+        fields:
+          - { label: "Marka Adı", name: "brandName", widget: "string" }
+          - { label: "Slogan", name: "tagline", widget: "string" }
+          - { label: "Ana Başlık", name: "heroTitle", widget: "string" }
+          - { label: "Açıklama Metni", name: "heroDescription", widget: "text" }
+          - { label: "Vitrin Görseli", name: "heroImage", widget: "image", required: false }
+          - { label: "Kur Güncelleme Notu", name: "goldRatesUpdatedAt", widget: "string", required: false }
+          - label: "Altın Kurları"
+            name: "goldRates"
+            widget: "list"
+            fields:
+              - { label: "Kur / Ürün Adı", name: "name", widget: "string" }
+              - { label: "Alış Fiyatı", name: "buy", widget: "string" }
+              - { label: "Satış Fiyatı", name: "sell", widget: "string" }
+          - label: "Koleksiyon Kartları"
+            name: "collections"
+            widget: "list"
+            fields:
+              - { label: "Koleksiyon Başlığı", name: "title", widget: "string" }
+              - { label: "Açıklama", name: "description", widget: "text" }
+              - { label: "Koleksiyon Görseli", name: "image", widget: "image", required: false }
+          - label: "İletişim ve Mağaza Bilgileri"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "WhatsApp Numarası (Başında 90, boşluksuz)", name: "whatsappNumber", widget: "string" }
+              - { label: "E-posta", name: "email", widget: "string" }
+              - { label: "Mağaza Adresi", name: "address", widget: "string" }
+              - { label: "Çalışma Saatleri", name: "workingHours", widget: "string" }
